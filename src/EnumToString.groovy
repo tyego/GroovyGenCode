@@ -1,4 +1,12 @@
-class GoMethodEnumToStringTest {
+class EnumToString {
+
+    static void main(String[] args) {
+        def goFilePath = '/Users/tyewang/go/src/git.wecomm.link/server/pylon/business/packet.go'
+        def tagLineNum = 160
+
+        def result = getMethodName(goFilePath, tagLineNum)
+        println 'result=' + result
+    }
 
     static String out(String log) {
         println log
@@ -81,14 +89,6 @@ class GoMethodEnumToStringTest {
         sb.append('}\n')
         def result = sb.toString()
         return result
-    }
-
-    static void main(String[] args) {
-        def goFilePath = '/Users/tyewang/go/src/git.wecomm.link/server/pylon/business/packet.go'
-        def tagLineNum = 160
-
-        def result = getMethodName(goFilePath, tagLineNum)
-        println 'result=' + result
     }
 
 }

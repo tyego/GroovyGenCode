@@ -1,4 +1,4 @@
-// LiveTemplates params use : groovyScript("/.../MethodName.groovy", filePath(), lineNumber())
+// LiveTemplates params use : groovyScript("/.../EnumToString.groovy", filePath(), lineNumber())
 
 def goFilePath = _1
 def tagLineNum = Integer.parseInt(_2)

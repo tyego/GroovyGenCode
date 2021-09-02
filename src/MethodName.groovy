@@ -1,4 +1,13 @@
-class GoMethodNameTest {
+class MethodName {
+
+
+    static void main(String[] args) {
+        def goFilePath = '/Users/tyewang/go/src/git.pttplus.hoowe.cn/server/call/data/redis_test.go'
+        def tagLineNum = 232
+
+        def m = getMethodName(goFilePath, tagLineNum)
+        println 'm=' + m
+    }
 
     static String getMethodName(String goFilePath, int tagLineNum) {
         // println  'goFilePath:' + goFilePath
@@ -52,16 +61,4 @@ class GoMethodNameTest {
         methodName = funcLine.substring(0, end)
         return methodName
     }
-
-    static void main(String[] args) {
-        def goFilePath = '/Users/tyewang/go/src/git.pttplus.hoowe.cn/server/call/data/redis_test.go'
-        def tagLineNum = 232
-
-        def m = getMethodName(goFilePath, tagLineNum)
-        println 'm=' + m
-
-
-
-    }
-
 }

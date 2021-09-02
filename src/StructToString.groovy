@@ -1,4 +1,12 @@
-class StructStringTest {
+class StructToString {
+
+    static void main(String[] args) {
+        def goFilePath = '/Users/tyewang/go/src/git.wecomm.link/server/call/data/mysql.go'
+        def tagLineNum = 232
+
+        def result = getMethodName(goFilePath, tagLineNum)
+        println 'result=' + result
+    }
 
     static String out(String log) {
         println log
@@ -202,13 +210,4 @@ class StructStringTest {
         def result = sb.toString()
         return result
     }
-
-    static void main(String[] args) {
-        def goFilePath = '/Users/tyewang/go/src/git.wecomm.link/server/call/data/mysql.go'
-        def tagLineNum = 232
-
-        def result = getMethodName(goFilePath, tagLineNum)
-        println 'result=' + result
-    }
-
 }
