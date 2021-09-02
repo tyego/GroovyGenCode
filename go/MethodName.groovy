@@ -8,7 +8,7 @@ def methodName = ''
 File file = new File(goFilePath)
 def lineNum = 0
 def funcLine = ''
-def isBreak = falseL
+def isBreak = false
 file.eachLine { line ->
             if (!isBreak) {
         lineNum++
