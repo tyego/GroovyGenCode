@@ -63,10 +63,10 @@ class StructToString {
         sb.append('\nfunc (i *')
         sb.append(structName)
         sb.append(') String() string {\n')
-        sb.append('\tb := strings.Builder{}\n')
         sb.append('\tif i == nil {\n')
         sb.append('\t\treturn "nil"\n')
         sb.append('\t}\n')
+        sb.append('\tb := strings.Builder{}\n')
 
         sb.append('\tb.WriteString("')
         sb.append(structName)
